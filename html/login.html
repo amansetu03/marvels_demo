@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>
+<link rel="stylesheet" type="text/css" href="contact_login.css">
+</head>  
+<script>
+alert("user name=aman\n password=1234567")
+function validateform()
+{ 
+var name=document.getElementById("username");
+var password=document.getElementById("password");
+  
+if(name.value==""){
+alert("user name Can't be empty");
+return false;
+}
+
+else if(password.value==""){
+alert("password Can't be empty");
+return false;}
+
+else if(password.value.length<=6){alert("password must be 6 character long");
+return false;}
+
+else if(name.value=="aman"&&password.value=="1234567"){
+alert("login successfully");
+return true;}
+
+
+else{alert("enter valid details");
+return false;}
+}
+</script>
+<body> 
+<div class="main">   
+    <center> <h1> Student Login Form </h1> </center>   
+
+    <form action="home.html"target="_blank" onsubmit="return validateform();">  
+
+        <div class="container">  
+ 
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" id="username">  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" id="password">  
+            <button type="submit">Login</button>   
+            <input type="checkbox" checked="checked"> Remember me   
+            <a href="home.html"><button type="button" class="cancelbtn"> Cancel</button>   </a>
+        Forgot<a href="registration.html"> password?</a>   
+        </div>   
+    </form>   
+</div>  
+</body>     
+</html> 
